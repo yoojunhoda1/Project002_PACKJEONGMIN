@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scale</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </section>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 1080px;
+        }
+
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        div {
+            width: 15%;
+            height: 50%;
+        }
+
+        section>div:nth-child(1) {
+            background-color: red;
+        }
+
+        div:nth-child(2) {
+            background-color: #222;
+        }
+
+        div:nth-child(3) {
+            background-color: #333;
+        }
+
+
+        div:nth-child(4) {
+            background-color: #444;
+        }
+
+
+        div:nth-child(5) {
+            background-color: #555;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+
+            let i = $('.wrap > section > div').index();
+
+            $('.wrap > section > div').mouseover(function () {
+
+                $('.wrap > section > div').css().stop().animate({
+                    'transform': 'scale(2.0)'
+                })
+
+            })
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>
